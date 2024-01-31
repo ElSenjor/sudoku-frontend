@@ -11,11 +11,14 @@ import { BoxComponent } from '../box/box.component';
 export class GridComponent {
 
   sudokuString: string = "006040097040730010017092030600070080105060903020010006050980160090056070860020300" 
-  sudokuArray: number[][];
+  sudokuArray: number[][]; // sudoku-like array
+  sudokuArrayBoxwise: number [][]; // first index: box number, second index: cell number in each box
+                                   // cell number in box is like box number in grid
 
   constructor() {
     console.log("SudokuString: " + this.sudokuString);
     this.sudokuArray = this.sudokuStringToArray(this.sudokuString);
+    this.sudokuArrayBoxwise = this.sudokuArrayToBoxwise(this.sudokuArray);
   }
 
   sudokuStringToArray(sudokuString: string) {
@@ -28,8 +31,21 @@ export class GridComponent {
       sudokuArray[row][col] = digit;
     }
     console.log(sudokuArray);
-
     return sudokuArray
+  }
+
+  sudokuArrayToBoxwise(sudokuArray: number[][]) {
+    let sudokuArrayBoxwise: number[][] = [[], [], [], [], [], [], [], [], []];
+
+    for(let row = 0; row < 9; row = row + 1) {
+      for(let col = 0; col < 9; col = col + 1) {
+        let box = 3 * Math.floor(row / 3) + Math.floor(col / 3);
+        sudokuArrayBoxwise[box].push(sudokuArray[row][col]);
+      }
+    }
+
+    console.log(sudokuArrayBoxwise);
+    return sudokuArrayBoxwise;
   }
 }
 
