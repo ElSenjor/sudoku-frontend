@@ -11,10 +11,11 @@ import { BoxComponent } from '../box/box.component';
 export class GridComponent {
 
   sudokuString: string = "006040097040730010017092030600070080105060903020010006050980160090056070860020300" 
+  sudokuArray: number[][];
 
   constructor() {
     console.log("SudokuString: " + this.sudokuString);
-    this.sudokuStringToArray(this.sudokuString);
+    this.sudokuArray = this.sudokuStringToArray(this.sudokuString);
   }
 
   sudokuStringToArray(sudokuString: string) {
