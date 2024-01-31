@@ -11,7 +11,6 @@ import { BoxComponent } from '../box/box.component';
 export class GridComponent {
 
   sudokuString: string = "006040097040730010017092030600070080105060903020010006050980160090056070860020300" 
-  //sudokuArray: int[] = 
 
   constructor() {
     console.log("SudokuString: " + this.sudokuString);
@@ -24,7 +23,6 @@ export class GridComponent {
     for(let i = 0; i < 81; i = i + 1) {
       let row: number = Math.floor(i / 9);
       let col: number = i % 9;
-      // console.log(row + ", " + col);
       let digit = Number(sudokuString[i])
       sudokuArray[row][col] = digit;
     }
