@@ -8,7 +8,14 @@
 }
 
 input {
-  width: 20px;
+  width: 25.9px;
+  height: 27.9px;
+  font-size: 24px;
+  text-align: center;
+  border: solid 0px;
+  margin: solid 0px;
+  padding: solid 0px;
+  color: darkblue
 }
 
 .border-right {
