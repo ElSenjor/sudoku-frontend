@@ -11,19 +11,9 @@ import { CellComponent } from '../cell/cell.component';
 })
 export class BoxComponent {
   constructor(){
-    console.log("Hello, I am the constructor of the BoxComponent class");
- /*    @Input() testString: String = '';
-    @Input() testArray: Number[][] = [[], [], [], [], [], [], [], [], []];
-      console.log("Hello, I am the constructor of the BoxComponent class");
-    console.log("testString: " + testString);
-    console.log("testArray: " + testArray); */  
+    console.log("Hello, I am the constructor of the BoxComponent class. And who are you, Sir?");
   }
-  // constructor(){
-    //console.log("Hello, I am the constructor of the BoxComponent class")
-    //@Input() sudokuArrayBoxwise2: number[][];
-    //console.log(sudokuArrayBoxwise2)
-    // sudokuArrayBoxwise: number [][];
-    
-    // sudokuArrayBoxwise = this.GridComponent.sudokuArrayBoxwise;
-  // }
+  @Input()
+  cellArray: string[] = ["1","2","3","4","5","6","7","8","9"]
+
 }

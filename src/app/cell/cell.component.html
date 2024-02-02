@@ -2,5 +2,9 @@
   class="cell"
   [ngClass]="{ 'border-right': borderRight, 'border-bottom': borderBottom }"
 >
-  <input />
+<!--  <p>{{this.ValueUnequalToZero(this.defaultValue)}}</p> -->
+ <!--  <input value={{defaultValue}}/> -->
+  <input value={{this.defaultValueEmptyIfZero(this.defaultValue)}}/>
+
+  
 </div>
