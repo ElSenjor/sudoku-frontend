@@ -18,23 +18,26 @@ export class CellComponent {
   @Input()
   defaultValue: string = "0";
 
+  readOnly: boolean = false;
+
+  ngOnInit(){
+    this.readOnly = this.ValueUnequalToZero(this.defaultValue);
+  }
+
   // If the value is Zero, return an empty string
   defaultValueEmptyIfZero(value: string){
     let result: string = value;
     if(value == "0"){
-      result = ""
+      result = "";
     }
-    return result
+    return result;
   }
-
-// Here, I am trying to set those cells to read only that have numbers unequal to zero
-// However, I wasn't able to get it working in the input tag in the html file yet
-  ValueUnequalToZero(value: string){
-    let readOnly: string = ""
+ ValueUnequalToZero(value: string){
+    let readOnly: boolean = false;
     if(value != "0"){
-      readOnly = "readonly"
+      readOnly = true;
     }
-    return readOnly
+    return readOnly;
   }
 
 }

@@ -2,7 +2,11 @@
   class="cell"
   [ngClass]="{ 'border-right': borderRight, 'border-bottom': borderBottom }"
 >
-  <input type="text" maxlength="1" value={{this.defaultValueEmptyIfZero(this.defaultValue)}}/>
+  <input 
+  type="text" 
+  maxlength="1" 
+  value="{{this.defaultValueEmptyIfZero(this.defaultValue)}}"
+  />
 
 
 </div>
