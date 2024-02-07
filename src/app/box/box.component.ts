@@ -10,9 +10,7 @@ import { CellComponent } from '../cell/cell.component';
   styleUrl: './box.component.css'
 })
 export class BoxComponent {
-  constructor(){
-    console.log("Hello, I am the constructor of the BoxComponent class. And who are you, Sir?");
-  }
+
   @Input()
   cellArray: string[] = ["1","2","3","4","5","6","7","8","9"]
 

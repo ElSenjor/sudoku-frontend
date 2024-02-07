@@ -26,14 +26,6 @@ export class CellComponent {
     }
     return result
   }
- 
-/*   ValueIsZero: boolean = true;
-  constructor(){ 
-    console.log("current value: " + this.defaultValue)
-    this.ValueIsZero = this.ValueEqualToZero(this.defaultValue)
-    console.log("Value is Zero? " + this.ValueIsZero)
-  } */
-
 
 // Here, I am trying to set those cells to read only that have numbers unequal to zero
 // However, I wasn't able to get it working in the input tag in the html file yet
@@ -45,8 +37,4 @@ export class CellComponent {
     return readOnly
   }
 
-  ngOnInit() {
-    // console.log("hello");
-    // console.log("current value: " + this.defaultValue)
-  }
 }

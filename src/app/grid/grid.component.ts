@@ -16,7 +16,6 @@ export class GridComponent {
                                    // cell number in box is like box number in grid
 
   constructor() {
-    console.log("SudokuString: " + this.sudokuString);
     this.sudokuArray = this.sudokuStringToArray(this.sudokuString);
     this.sudokuArrayBoxwise = this.sudokuArrayToBoxwise(this.sudokuArray);
   }
@@ -30,7 +29,6 @@ export class GridComponent {
       let digit = Number(sudokuString[i])
       sudokuArray[row][col] = digit;
     }
-    console.log(sudokuArray);
     return sudokuArray
   }
 
@@ -43,8 +41,6 @@ export class GridComponent {
         sudokuArrayBoxwise[box].push(sudokuArray[row][col].toString());
       }
     }
-
-    console.log(sudokuArrayBoxwise);
     return sudokuArrayBoxwise;
   }
 }
