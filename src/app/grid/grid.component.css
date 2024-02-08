@@ -1,8 +1,8 @@
 .grid {
     display: flex;
     flex-wrap: wrap;
-    width: 282px;
-    height: 282px;
+    width: 90vmin;
+    height: 90vmin;
     border: solid 2px;
     margin: 0px;
     padding: 0px;

@@ -1,25 +1,14 @@
 .cell {
   flex-wrap: wrap;
-  width: 30px;
-  height: 30px;
-  background-color: lightblue;
-  border-left: solid 1px;
-  border-top: solid 1px;
+  width: 9.4vmin;
+  height: 9.4vmin;
+  background-color: rgb(201, 225, 240);
+  border-left: solid 0.45vmin;
+  border-top: solid 0.45vmin;
   margin: 0px;
   padding: 0px;
-  font-size: 24px;
+  font-size: 8vmin;
   text-align: center;
-}
-
-input {
-  width: 30px;
-  height: 30px;
-  font-size: 24px;
-  text-align: center;
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
-  color: darkblue
 }
 
 .border-right {
@@ -28,3 +17,4 @@ input {
 .border-bottom {
   border-bottom: solid 1px;
 }
+

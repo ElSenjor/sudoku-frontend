@@ -18,10 +18,10 @@ export class CellComponent {
   @Input()
   defaultValue: string = "0";
 
-  readOnly: boolean = false;
+  valIsZero: boolean = false;
 
   ngOnInit(){
-    this.readOnly = this.ValueUnequalToZero(this.defaultValue);
+    this.valIsZero = this.ValueEqualToZero(this.defaultValue);
   }
 
   // If the value is Zero, return an empty string
@@ -32,12 +32,13 @@ export class CellComponent {
     }
     return result;
   }
- ValueUnequalToZero(value: string){
-    let readOnly: boolean = false;
-    if(value != "0"){
-      readOnly = true;
+  // if the value is equal to zero, return true (boolean)
+  ValueEqualToZero(value: string){
+    let valIsZero: boolean = false;
+    if(value == "0"){
+      valIsZero = true;
     }
-    return readOnly;
+    return valIsZero;
   }
 
 }
