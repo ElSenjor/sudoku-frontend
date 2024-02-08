@@ -1,12 +1,9 @@
 <div
   class="cell"
   [ngClass]="{ 'border-right': borderRight, 'border-bottom': borderBottom }"
+  contenteditable="true"
+  
 >
-  <input 
-  type="text" 
-  maxlength="1" 
-  value="{{this.defaultValueEmptyIfZero(this.defaultValue)}}"
-  />
 
-
+  {{this.defaultValueEmptyIfZero(this.defaultValue)}}
 </div>
